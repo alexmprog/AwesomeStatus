@@ -1,0 +1,29 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    // Android
+    androidBuildToolsVersion = "23.0.2"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 23
+    androidCompileSdkVersion = 23
+
+    // Libraries
+    butterKnifeVersion = '7.0.1'
+    supportLibraryVersion = '23.1.1'
+    jUnitVersion = '4.12'
+    facebookVersion = '4.7.0'
+
+    librariesDependencies = [
+            butterKnife  : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            junit        : "junit:junit:${jUnitVersion}",
+            facebook     : "com.facebook.android:facebook-android-sdk:${facebookVersion}",
+            appCompat    : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            supportDesign: "com.android.support:design:${supportLibraryVersion}",
+            cardView     : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            recyclerView : "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+    ]
+}

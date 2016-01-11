@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Awesome Status</string>
+    <string name="android_icon">Android icon</string>
+    <string name="connect_to_facebook">Connect to Facebook</string>
+    <string name="as_text">AS</string>
+    <string name="user_name">User name</string>
+    <string name="what_are_you_doing_today">What are you doing today?</string>
+    <string name="update_status">Update status</string>
+    <string name="disconnect_form_facebook">Disconnect form Facebook</string>
+    <string name="empty_post_message">Please enter text for your status!</string>
+    <string name="status_updated">Status updated</string>
+    <string name="check_connection">Please check your network connection!</string>
+</resources>

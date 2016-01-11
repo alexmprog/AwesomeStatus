@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_splash_text_padding">20dp</dimen>
+    <dimen name="activity_splash_text_size">60sp</dimen>
+    <dimen name="activity_splash_image_margin">16dp</dimen>
+    <dimen name="activity_login_button_drawable_padding">10dp</dimen>
+    <dimen name="activity_login_button_text_size">16sp</dimen>
+    <dimen name="activity_login_text_margin">16dp</dimen>
+    <dimen name="activity_login_text_size">30sp</dimen>
+    <dimen name="activity_post_content_padding">16dp</dimen>
+    <dimen name="activity_post_user_name_padding">10dp</dimen>
+    <dimen name="activity_post_user_name_drawable_padding">10dp</dimen>
+    <dimen name="activity_post_user_name_text_size">24sp</dimen>
+    <dimen name="activity_post_text_margin_bottom">20dp</dimen>
+    <dimen name="activity_post_text_size">16sp</dimen>
+    <dimen name="activity_post_button_post_text_size">16sp</dimen>
+    <dimen name="activity_post_text_logo_size">30sp</dimen>
+    <dimen name="activity_post_card_text">30sp</dimen>
+</resources>
