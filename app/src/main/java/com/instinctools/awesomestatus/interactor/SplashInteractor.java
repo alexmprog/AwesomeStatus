@@ -1,6 +1,6 @@
 package com.instinctools.awesomestatus.interactor;
 
-import com.facebook.AccessToken;
+import com.instinctools.awesomestatus.utils.FacebookManager;
 
 /**
  * Created by alexmprog on 11.01.2016.
@@ -8,6 +8,6 @@ import com.facebook.AccessToken;
 public class SplashInteractor {
 
     public boolean isUserLogged() {
-        return AccessToken.getCurrentAccessToken() != null;
+        return FacebookManager.getInstance().isUserLogged();
     }
 }

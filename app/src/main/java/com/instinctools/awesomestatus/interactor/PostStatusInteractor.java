@@ -17,8 +17,8 @@ import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
-import com.instinctools.awesomestatus.model.LoginCallback;
 import com.instinctools.awesomestatus.model.PostStatusCallback;
+import com.instinctools.awesomestatus.model.User;
 import com.instinctools.awesomestatus.model.UserCallback;
 import com.instinctools.awesomestatus.utils.FacebookManager;
 
@@ -55,7 +55,8 @@ public class PostStatusInteractor implements FacebookCallback<LoginResult> {
     }
 
     public void loadUser() {
-        if (FacebookManager.getInstance().getUser() == null) {
+        User user = FacebookManager.getInstance().getUser();
+        if (user == null) {
             mProfileTracker = new ProfileTracker() {
                 @Override
                 protected void onCurrentProfileChanged(Profile profile, Profile profile2) {
@@ -65,6 +66,8 @@ public class PostStatusInteractor implements FacebookCallback<LoginResult> {
                 }
             };
             mProfileTracker.startTracking();
+        } else {
+            mUserCallback.onSuccess(user);
         }
     }
 
@@ -113,7 +116,7 @@ public class PostStatusInteractor implements FacebookCallback<LoginResult> {
 
     @Override
     public void onCancel() {
-        Log.d(TAG, "Post status failed.");
+        Log.d(TAG, "Post status canceled.");
         mPostStatusCallback.onError(null);
     }
 

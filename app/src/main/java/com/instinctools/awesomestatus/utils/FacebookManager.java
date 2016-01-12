@@ -46,6 +46,11 @@ public class FacebookManager {
     private FacebookManager() {
     }
 
+    public boolean isUserLogged() {
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        return accessToken != null && !accessToken.isExpired();
+    }
+
     public boolean checkPublishPermissions() {
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         return accessToken != null && accessToken.getPermissions().contains(PUBLISH_ACTION);

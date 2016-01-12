@@ -11,7 +11,6 @@ import com.instinctools.awesomestatus.interactor.PostStatusInteractor;
 import com.instinctools.awesomestatus.model.PostStatusCallback;
 import com.instinctools.awesomestatus.model.User;
 import com.instinctools.awesomestatus.model.UserCallback;
-import com.instinctools.awesomestatus.utils.FacebookManager;
 import com.instinctools.awesomestatus.utils.FlowManager;
 import com.instinctools.awesomestatus.utils.Utils;
 import com.instinctools.awesomestatus.view.PostStatusView;
@@ -68,19 +67,6 @@ public class PostStatusPresenter implements BasePresenter, PostStatusCallback, U
     @Override
     public void viewCreated() {
         mPostStatusInteractor.loadUser();
-
-        User user = FacebookManager.getInstance().getUser();
-        if (user == null) {
-            return;
-        }
-
-        PostStatusView view = getView();
-        if (view == null) {
-            return;
-        }
-
-        view.setUsername(user.getName());
-        view.setStatusEditorEnabled(true);
     }
 
     @Override
